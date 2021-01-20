@@ -19,7 +19,7 @@ leaderboard:
   - id: 1
     schema:
       {
-        "labels": ["RandomAgent_wins", "RandomAgent_losses", "GreedyAgent_wins", "GreedyAgent_losses", "models/dq_agent.h5_wins", "models/dq_agent.h5_losses", "Total"],
+        "labels": ["RandomAgent_wins", "RandomAgent_losses", "GreedyAgent_wins", "GreedyAgent_losses", "DeepQAgent_wins", "DeepQAgent_losses", "Total"],
         "default_order_by": "Total",
       }
 

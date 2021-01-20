@@ -68,7 +68,7 @@ class DeepQAgent(BaseAgent.BaseAgent):
 
     def save(self, filename):
         """Saving DeepQ agent as filename (default extension .h5)"""
-        self.name = filename
+        #self.name = filename
         filename += '.h5'
         self.dnn_model.save(filename)
         return self
@@ -83,7 +83,7 @@ class DeepQAgent(BaseAgent.BaseAgent):
                                     custom_objects=custom_objects,
                                     compile=compile)
         self.dnn_model._make_predict_function()
-        self.name = filename
+        self.name = "models/dq_agent.h5"
         print('Model loaded')
 
         return self

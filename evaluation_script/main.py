@@ -1,9 +1,10 @@
 import random
-from pyneogame.gym import Gym
-from pyneogame.Agent.GreedyAgent import GreedyAgent
-from pyneogame.Agent.DeepQAgent import DeepQAgent
-from pyneogame.Agent.RandomAgent import RandomAgent
-from pyneogame.Engine import Game
+from .pyneogame.gym import Gym
+from .pyneogame.Agent.GreedyAgent import GreedyAgent
+from .pyneogame.Agent.DeepQAgent import DeepQAgent
+from .pyneogame.Agent.RandomAgent import RandomAgent
+from .pyneogame.Engine import Game
+from pathlib import Path
 
 
 def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwargs):
@@ -17,8 +18,8 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
     }
     ]
 
-    N_GAMES = 10
-    DQ_FILE = 'models/dq_agent.h5'
+    N_GAMES = 1000
+    DQ_FILE = str(Path(__file__).parent.absolute())+'/models/dq_agent.h5'
 
     print("Evaluating model: {}".format(user_submission_file))
 
